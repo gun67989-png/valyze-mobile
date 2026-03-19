@@ -88,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
     // Video paylaşım mesajlarını işle
     if (message.startsWith('share:')) {
       final data = message.substring(6);
-      SharePlus.instance.share(ShareParams(text: data));
+      Share.share(data);
     } else if (message.startsWith('editor:')) {
       final url = message.substring(7);
       _openInEditor(url);
